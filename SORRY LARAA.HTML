@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Laraa 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+        background: white;
+        width: 92%;
+        max-width: 420px;
+        padding: 25px;
+        border-radius: 24px;
+        text-align: center;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+        animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+        from { transform: scale(0.6); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ff4d6d;
+        margin-bottom: 10px;
+    }
+
+    .heart {
+        font-size: 40px;
+        animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+        0%,100% { transform: scale(1); }
+        50% { transform: scale(1.25); }
+    }
+
+    h1 {
+        color: #ff3d68;
+        margin: 8px 0;
+    }
+
+    p {
+        color: #444;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    button {
+        margin: 10px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .yes {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    .think {
+        background: #ffd6e0;
+        color: #444;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+    }
+
+    .reply {
+        display: none;
+        margin-top: 15px;
+        background: #fff0f3;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- 🎶 Background Music -->
+<audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+
+    <img src="laraa.jpg" class="photo" alt="Laraa">
+
+    <div class="heart">❤️</div>
+
+    <h1>Sorry Laraa</h1>
+
+    <p>
+        Shayad mujhse galti ho gayi 😔<br>
+        Par ek baat sach hai —<br>
+        <b>tu meri life ki sabse special bestie hai</b> 💫
+    </p>
+
+    <p>👉 Kya tu mujhe maaf karegi?</p>
+
+    <button class="yes" onclick="forgive()">Yes, maaf kiya 😊</button>
+    <button class="think" onclick="think()">Sochungi 🤔</button>
+
+    <div id="reply" class="reply"></div>
+</div>
+
+<script>
+    function forgive() {
+        const r = document.getElementById("reply");
+        r.style.display = "block";
+        r.innerHTML =
+        "Yayyy 🥹💖<br>Laraa, thank you!<br>Tu bina baat ke bhi meri bestie rahegi ❤️<br><br>WhatsApp open ho raha hai…";
+
+        setTimeout(() => {
+            window.location.href =
+            "https://wa.me/?text=Laraa%20maaf%20kar%20diya%20🥹❤️%20chal%20ab%20baat%20karte%20hai";
+        }, 2000);
+    }
+
+    function think() {
+        const r = document.getElementById("reply");
+        r.style.display = "block";
+        r.innerHTML =
+        "Theek hai 🥺<br>Main wait karunga…<br>Tu jab ready ho, main yahin hoon 💖";
+    }
+</script>
+
+</body>
+</html>
